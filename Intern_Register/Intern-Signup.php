@@ -24,8 +24,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/bootstrap-tokenfield.js"></script>
       <!--Scripts for phone number field-->
       <link rel="stylesheet" href="/International Phone Number/build/css/intlTelInput.css">
-      
-      
  </head>
      <body>
       <div class="container">

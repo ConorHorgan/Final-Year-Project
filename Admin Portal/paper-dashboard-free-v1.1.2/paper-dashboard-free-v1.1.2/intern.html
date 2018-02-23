@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Paper Dashboard by Creative Tim</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+           
+    <!-- Bootstrap core CSS     -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+    
+           <!--Date Picker JQuery-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="sidebar" data-background-color="white" data-active-color="danger">
+
+    <!--
+		Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+		Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
+	-->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                   Intern Portal
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="dashboard.php">
+                        <i class="ti-panel"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="user.html">
+                        <i class="ti-user"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="intern.html">
+                        <i class="ti-user"></i>
+                        <p>SME Admin</p>
+                    </a>
+                </li>
+                 <li class="active">
+                    <a href="intern1.html">
+                        <i class="ti-user"></i>
+                        <p>Project Admin</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html">
+                        <i class="ti-view-list-alt"></i>
+                        <p>Table List</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="typography.html">
+                        <i class="ti-text"></i>
+                        <p>Typography</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="icons.html">
+                        <i class="ti-pencil-alt2"></i>
+                        <p>Icons</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="maps.html">
+                        <i class="ti-map"></i>
+                        <p>Maps</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="notifications.html">
+                        <i class="ti-bell"></i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
+				<li class="active-pro">
+                    <a href="upgrade.html">
+                        <i class="ti-export"></i>
+                        <p>Upgrade to PRO</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+		<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">User Profile</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="ti-panel"></i>
+								<p>Stats</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="ti-bell"></i>
+                                    <p class="notification">5</p>
+									<p>Notifications</p>
+									<b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Notification 1</a></li>
+                                <li><a href="#">Notification 2</a></li>
+                                <li><a href="#">Notification 3</a></li>
+                                <li><a href="#">Notification 4</a></li>
+                                <li><a href="#">Another notification</a></li>
+                              </ul>
+                        </li>
+						<li>
+                            <a href="#">
+								<i class="ti-settings"></i>
+								<p>Settings</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+ <div class="container box">  
+                <h3 align="center">Manage All Interns</h3>  
+                <br /><br />  
+                <br /><br />  
+                <label>Enter First Name</label>  
+                <input type="text" name="first_name" id="first_name" class="form-control" />  
+                <br />  
+                <label>Enter Last Name</label>  
+                <input type="text" name="last_name" id="last_name" class="form-control" />  
+                <br /><br />  
+                  <input type="text" id="startdate" required="required" name="startdate" class="styled-select blue rounded" placeholder="Ideal Project Start Date" />
+                        <input type="text" id="enddate" required="required" name="enddate" class="styled-select blue rounded" placeholder="Ideal Project End Date" />
+                <div align="center">  
+                     <input type="hidden" name="id" id="user_id" />  
+                     <button type="button" name="action" id="action" class="btn btn-warning">Add</button>  
+                </div>  
+                <br />  
+                <br />  
+                <div id="result" class="table-responsive">  
+                </div>  
+           </div>  
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+
+                        <li>
+                            <a href="http://www.creative-tim.com">
+                                Creative Tim
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://blog.creative-tim.com">
+                               Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.creative-tim.com/license">
+                                Licenses
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+				<div class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script>, made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative Tim</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
+
+	<!--  Charts Plugin -->
+	<script src="assets/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
+	<script src="assets/js/paper-dashboard.js"></script>
+
+	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+	<script src="assets/js/demo.js"></script>
+
+</html>
+ <script>  
+ /* global $ */
+ $(document).ready(function(){  
+      fetchUser();  
+      function fetchUser()  
+      {  
+           var action = "select";  
+           $.ajax({  
+                url : "/Admin Portal/CRUD.1/select.php",  
+                method:"POST",  
+                data:{action:action},  
+                success:function(data){  
+                     $('#first_name').val('');  
+                     $('#last_name').val('');  
+                     $('#action').text("Add");  
+                     $('#result').html(data);  
+                }  
+           });  
+      }  
+      $('#action').click(function(){  
+           var firstName = $('#first_name').val();  
+           var lastName = $('#last_name').val();  
+           var id = $('#user_id').val();  
+           var action = $('#action').text();  
+           if(firstName != '' && lastName != '')  
+           {  
+                $.ajax({  
+                     url : "/Admin Portal/CRUD.1/action.php",  
+                     method:"POST",  
+                     data:{firstName:firstName, lastName:lastName, id:id, action:action},  
+                     success:function(data){  
+                          alert(data);  
+                          fetchUser();  
+                     }  
+                });  
+           }  
+           else  
+           {  
+                alert("Both Fields are Required");  
+           }  
+      });  
+      $(document).on('click', '.update', function(){  
+           var id = $(this).attr("id");  
+           $.ajax({  
+                url:"/Admin Portal/CRUD.1/fetch.php",  
+                method:"POST",  
+                data:{id:id},  
+                dataType:"json",  
+                success:function(data){  
+                     $('#action').text("Edit");  
+                     $('#user_id').val(id);  
+                     $('#first_name').val(data.first_name);  
+                     $('#last_name').val(data.last_name);  
+                }  
+           })  
+      });  
+      $(document).on('click', '.delete', function(){  
+           var id = $(this).attr("id");  
+           if(confirm("Are you sure you want to remove this data?"))  
+           {  
+                var action = "Delete";  
+                $.ajax({  
+                     url:"/Admin Portal/CRUD.1/action.php",  
+                     method:"POST",  
+                     data:{id:id, action:action},  
+                     success:function(data)  
+                     {  
+                          fetchUser();  
+                          alert(data);  
+                     }  
+                })  
+           }  
+           else  
+           {  
+                return false;  
+           }  
+      });  
+ });  
+ </script>  
+ <script>
+/* SOURCE: https://jqueryui.com/datepicker/ */
+                /* global $ */
+                $( function() {
+                    var dateFormat = "yy-mm-dd",
+                      from = $( "#startdate" )
+                        .datepicker({
+                          dateFormat: "yy-mm-dd",
+                          defaultDate: "+1d",
+                          changeMonth: true,
+                          numberOfMonths: 2,
+                          minDate: -0
+                        })
+                        .on( "change", function() {
+                          to.datepicker( "option", "minDate", getDate( this ) );
+                        }),
+                      to = $( "#enddate" ).datepicker({
+                       dateFormat: "yy-mm-dd",
+                        defaultDate: "+1w",
+                        changeMonth: true,
+                        numberOfMonths: 2
+                      })
+                      .on( "change", function() {
+                        from.datepicker( "option", "maxDate", getDate( this ) );
+                      });
+                 
+                    function getDate( element ) {
+                      var date;
+                      try {
+                        date = $.datepicker.parseDate( dateFormat, element.value );
+                      } catch( error ) {
+                        date = null;
+                      }
+                 
+                      return date;
+                    }
+                  } );
+  </script>

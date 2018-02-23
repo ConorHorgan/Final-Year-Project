@@ -10,17 +10,14 @@
  * @link https://github.com/panique/php-login-one-file/
  * @license http://opensource.org/licenses/MIT MIT License
  */
+ 
 class OneFileLoginApplication
 {
-    /**
-     * @var string Type of used database (currently only SQLite, but feel free to expand this with mysql etc)
-     */
-    private $db_type = "sqlite"; //
-    /**
-     * @var string Path of the database file (create this with _install.php)
-     */
-    private $db_sqlite_path = "./users.db";
-    /**
+    //SOURCE: https://www.w3schools.com/php/php_mysql_insert.asp
+    $servername = "localhost";
+    $username = "conorhorgan95";
+    $password = "";
+$dbname = "intern_portal";
      * @var object Database connection
      */
     private $db_connection = null;
@@ -92,6 +89,7 @@ class OneFileLoginApplication
         try {
             $this->db_connection = new PDO($this->db_type . ':' . $this->db_sqlite_path);
             return true;
+            
         } catch (PDOException $e) {
             $this->feedback = "PDO database connection problem: " . $e->getMessage();
         } catch (Exception $e) {
@@ -130,6 +128,14 @@ class OneFileLoginApplication
     }
     /**
      * Process flow of login with POST data
+  
+  
+  
+  
+  
+  
+  
+  
      */
     private function doLoginWithPostData()
     {

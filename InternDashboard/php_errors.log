@@ -1,0 +1,28 @@
+[16-Feb-2018 18:43:24 UTC] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 352
+[16-Feb-2018 18:43:24 UTC] PHP Stack trace:
+[16-Feb-2018 18:43:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php:0
+[16-Feb-2018 18:43:24 UTC] PHP   2. mysql_num_rows() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php:352
+[16-Feb-2018 18:43:38 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 352
+[16-Feb-2018 18:43:38 UTC] PHP Stack trace:
+[16-Feb-2018 18:43:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php:0
+[16-Feb-2018 18:43:38 UTC] PHP   2. mysqli_num_rows() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php:352
+[16-Feb-2018 18:44:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 610
+[16-Feb-2018 18:45:50 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 610
+[16-Feb-2018 18:49:10 UTC] PHP Parse error:  syntax error, unexpected 'table' (T_STRING), expecting '(' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 345
+[16-Feb-2018 19:43:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 355
+[16-Feb-2018 19:43:48 UTC] PHP Stack trace:
+[16-Feb-2018 19:43:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php:0
+[16-Feb-2018 19:43:48 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php:355
+[17-Feb-2018 15:21:20 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 601
+[17-Feb-2018 15:25:43 UTC] PHP Parse error:  syntax error, unexpected '"', expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 547
+[17-Feb-2018 15:41:32 UTC] PHP Parse error:  syntax error, unexpected ':' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 601
+[17-Feb-2018 15:58:14 UTC] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 605
+[17-Feb-2018 16:05:38 UTC] PHP Parse error:  syntax error, unexpected '$i' (T_VARIABLE) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 592
+[17-Feb-2018 16:06:06 UTC] PHP Parse error:  syntax error, unexpected '$i' (T_VARIABLE) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 592
+[17-Feb-2018 16:06:27 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 604
+[17-Feb-2018 16:19:20 UTC] PHP Parse error:  syntax error, unexpected 'endwhile' (T_ENDWHILE) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 605
+[17-Feb-2018 16:20:14 UTC] PHP Parse error:  syntax error, unexpected '$lastName1' (T_VARIABLE) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 644
+[17-Feb-2018 16:20:41 UTC] PHP Parse error:  syntax error, unexpected '$lastName1' (T_VARIABLE) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 644
+[20-Feb-2018 14:46:32 UTC] PHP Parse error:  syntax error, unexpected 'Back' (T_STRING) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 6
+[20-Feb-2018 15:09:30 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 28
+[22-Feb-2018 19:51:23 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/dashboard.php on line 961

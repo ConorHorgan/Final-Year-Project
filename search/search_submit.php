@@ -1,15 +1,35 @@
-<!-- Source: http://www.webslesson.info/2016/09/php-ajax-display-dynamic-mysql-data-in-bootstrap-modal.html --> 
+<!-- Main Source: http://www.webslesson.info/2016/09/php-ajax-display-dynamic-mysql-data-in-bootstrap-modal.html --> 
 <?php
+/* Displays user information and some useful messages */
+session_start();
+
+// Check if user is logged in using the session variable
+if ( $_SESSION['logged_in'] != 1 ) {
+  $_SESSION['message'] = "You must log in before viewing your profile page!";
+  header("location: /login-system/error.php");    
+}
+else {
+    // Makes it easier to read
+    $first_name = $_SESSION['first_name'];
+    $last_name = $_SESSION['last_name'];
+    $email = $_SESSION['email'];
+    $active = $_SESSION['active'];
+    $id = $_SESSION['id'];
+}
 
 if(isset($_POST['search']))
 {
     
     $valueLocation = $_POST['location'];
     $valueSkill = $_POST['skill'];
+    $endDate = $_POST['enddate'];
+    $startDate = $_POST['startdate'];
+    print "Study PHP at " . $endDate . "<br>";
     
     // search in all table columns
     // using concat mysql function
-    $query = "SELECT * FROM `project-registration` WHERE `location` LIKE '%".$valueLocation."%' AND `skill` LIKE '%".$valueSkill."%'";
+    $query = "SELECT * FROM `project-registration` WHERE `location` LIKE '".$valueLocation."' AND `skill` LIKE '".$valueSkill."' AND startdate >= '".$startDate."' AND enddate <= '".$endDate."'";
+print "Study PHP at " . $query . "<br>";  
     $search_result = filterTable($query);
     
 }
@@ -25,7 +45,18 @@ function filterTable($query)
     $filter_Result = mysqli_query($connect, $query);
     return $filter_Result;
 }
-
+if(isset($_POST['apply']))
+{
+$connect = mysqli_connect("localhost", "conorhorgan95", "", "intern_portal");  
+  $sql = " UPDATE project-registration SET InternsSelected= '' WHERE id = '".$_POST["employee_id"]."'";
+   
+   if (mysqli_query($conn, $sql)) {
+      echo "Record updated successfully";
+   } else {
+      echo "Error updating record: " . mysqli_error($conn);
+   }
+   mysqli_close($conn);
+}
 ?>
 
 <!DOCTYPE html>
@@ -134,9 +165,13 @@ function filterTable($query)
     cursor: pointer;
 }
 </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
-           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+           <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+           <!--Date Picker JQuery-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>
     <body>
         
@@ -167,6 +202,8 @@ function filterTable($query)
                         <option value="Slim">Slim</option>
                         <option value="FuelPHP">FuelPHP</option>
                       </select>
+                      <input type="text" id="startdate" required="required" name="startdate" class="styled-select blue rounded" placeholder="Ideal Project Start Date" />
+                        <input type="text" id="enddate" required="required" name="enddate" class="styled-select blue rounded" placeholder="Ideal Project End Date" />
                       
         
             <input type="submit" name="search" style="background-color: #269abc; color: #fff;" value="Filter" class="rounded"> <br><br>
@@ -194,16 +231,13 @@ function filterTable($query)
                     <td><?php echo $row['internsneeded'];?></td>
                     <td><?php echo $row['estimatehours'];?></td>
                     <td><?php echo $row['skill'];?></td>
-                    <td><input type="button" name="view" value="view" id="<?php echo $row["id"]; ?>" class="btn btn-info btn-xs view_data" /></td>
+                    <td><input type="button" name="view" value="view" id="<?php echo $row["id"]; ?>" class="view_data" /></td>
                 </tr>
                 <?php endwhile;?>
             </table>
         </form>
         
-        
-    </body>
-</html>
-<div id="dataModal" class="modal fade">  
+        <div id="dataModal" class="modal fade">  
       <div class="modal-dialog">  
            <div class="modal-content">  
                 <div class="modal-header">  
@@ -214,20 +248,53 @@ function filterTable($query)
                 </div>  
                 <div class="modal-footer">  
                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
-                     <input type="button" name="view" value="Apply"  class="btn btn-info btn-xs view_data" />
                 </div>  
            </div>  
       </div>  
  </div>  
+    </body>
+</html>
+<!--<div id="dataModal" class="modal fade">  
+      <div class="modal-dialog">  
+           <div class="modal-content">  
+                <div class="modal-header">  
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>  
+                     <h4 class="modal-title">Employee Details</h4>  
+                </div>  
+                <div class="modal-body" id="employee_detail">  
+                </div>  
+                <div class="modal-footer">  
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
+                     <input type="button" name="apply" value="Apply"  class="btn btn-info btn-xs apply" />
+                </div>  
+           </div>  
+      </div>  
+ </div>  -->
 <script>
 /* global $ */
+ $(document).ready(function(){  
+      $('.view_data').click(function(){  
+           var employee_id = $(this).attr("id");  
+           $.ajax({  
+                url:"select.php",  
+                method:"post",  
+                data:{employee_id:employee_id},  
+                success:function(data){  
+                     $('#employee_detail').html(data);  
+                     $('#dataModal').modal("show");  
+                }  
+           });  
+      });  
+ });  
+ </script>
 
-       $(document).on('click', '.view_data', function(){  
+/* global $ */
+     <!--  $(document).on('click', '.view_data', function(){  
            var employee_id = $(this).attr("id");  
            if(employee_id != '')  
            {  
                 $.ajax({  
-                     url:"select.php",  
+                     url:"/search/select.php",  
                      method:"POST",  
                      data:{employee_id:employee_id},  
                      success:function(data){  
@@ -236,7 +303,46 @@ function filterTable($query)
                      }  
                 });  
            }            
-      }); 
+      });  -->
+      <script>
+      
+                /* SOURCE: https://jqueryui.com/datepicker/ */
+                /* global $ */
+                $( function() {
+                    var dateFormat = "yy-mm-dd",
+                      from = $( "#startdate" )
+                        .datepicker({
+                          dateFormat: "yy-mm-dd",
+                          defaultDate: "+1d",
+                          changeMonth: true,
+                          numberOfMonths: 2,
+                          minDate: -0
+                        })
+                        .on( "change", function() {
+                          to.datepicker( "option", "minDate", getDate( this ) );
+                        }),
+                      to = $( "#enddate" ).datepicker({
+                       dateFormat: "yy-mm-dd",
+                        defaultDate: "+1w",
+                        changeMonth: true,
+                        numberOfMonths: 2
+                      })
+                      .on( "change", function() {
+                        from.datepicker( "option", "maxDate", getDate( this ) );
+                      });
+                 
+                    function getDate( element ) {
+                      var date;
+                      try {
+                        date = $.datepicker.parseDate( dateFormat, element.value );
+                      } catch( error ) {
+                        date = null;
+                      }
+                 
+                      return date;
+                    }
+                  } );
+     
 
 
 </script>

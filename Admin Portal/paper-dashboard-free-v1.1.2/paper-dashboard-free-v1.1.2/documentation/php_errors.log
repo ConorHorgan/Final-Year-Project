@@ -1,0 +1,98 @@
+[06-Feb-2018 14:23:03 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, resource given in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php on line 11
+[06-Feb-2018 14:23:03 UTC] PHP Stack trace:
+[06-Feb-2018 14:23:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:0
+[06-Feb-2018 14:23:03 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:11
+[06-Feb-2018 14:23:03 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php on line 13
+[06-Feb-2018 14:23:03 UTC] PHP Stack trace:
+[06-Feb-2018 14:23:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:0
+[06-Feb-2018 14:23:03 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:13
+[06-Feb-2018 14:32:56 UTC] PHP Catchable fatal error:  Object of class mysqli_result could not be converted to string in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php on line 38
+[06-Feb-2018 14:32:56 UTC] PHP Stack trace:
+[06-Feb-2018 14:32:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:0
+[06-Feb-2018 14:57:31 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php on line 38
+[06-Feb-2018 14:57:31 UTC] PHP Stack trace:
+[06-Feb-2018 14:57:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:0
+[06-Feb-2018 14:57:31 UTC] PHP   2. mysqli_result->fetch_assoc() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:38
+[06-Feb-2018 15:20:57 UTC] PHP Parse error:  syntax error, unexpected 'table' (T_STRING) in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php on line 10
+[06-Feb-2018 15:21:09 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php on line 39
+[06-Feb-2018 15:21:09 UTC] PHP Stack trace:
+[06-Feb-2018 15:21:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:0
+[06-Feb-2018 15:21:09 UTC] PHP   2. mysqli_result->fetch_assoc() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:39
+[06-Feb-2018 17:25:29 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'my_user'@'localhost' (using password: YES) in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 3
+[06-Feb-2018 17:25:29 UTC] PHP Stack trace:
+[06-Feb-2018 17:25:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 17:25:29 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:3
+[06-Feb-2018 17:25:29 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 15
+[06-Feb-2018 17:25:29 UTC] PHP Stack trace:
+[06-Feb-2018 17:25:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 17:25:29 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:15
+[06-Feb-2018 17:25:29 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, boolean given in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 19
+[06-Feb-2018 17:25:29 UTC] PHP Stack trace:
+[06-Feb-2018 17:25:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 17:25:29 UTC] PHP   2. mysqli_close() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:19
+[06-Feb-2018 17:28:59 UTC] PHP Warning:  mysqli_query() expects at least 2 parameters, 1 given in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 21
+[06-Feb-2018 17:28:59 UTC] PHP Stack trace:
+[06-Feb-2018 17:28:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 17:28:59 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:21
+[06-Feb-2018 21:39:42 UTC] PHP Fatal error:  Call to a member function fetch_object() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 60
+[06-Feb-2018 21:39:42 UTC] PHP Stack trace:
+[06-Feb-2018 21:39:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 21:46:10 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 49
+[06-Feb-2018 21:46:10 UTC] PHP Stack trace:
+[06-Feb-2018 21:46:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 21:46:10 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:49
+[06-Feb-2018 21:46:10 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 50
+[06-Feb-2018 21:46:10 UTC] PHP Stack trace:
+[06-Feb-2018 21:46:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 21:46:10 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:50
+[06-Feb-2018 21:46:42 UTC] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 52
+[06-Feb-2018 21:53:39 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 65
+[06-Feb-2018 21:53:39 UTC] PHP Stack trace:
+[06-Feb-2018 21:53:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 21:53:39 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:65
+[06-Feb-2018 21:58:19 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 52
+[06-Feb-2018 21:58:19 UTC] PHP Stack trace:
+[06-Feb-2018 21:58:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 21:59:22 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 52
+[06-Feb-2018 21:59:22 UTC] PHP Stack trace:
+[06-Feb-2018 21:59:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 21:59:30 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 52
+[06-Feb-2018 21:59:30 UTC] PHP Stack trace:
+[06-Feb-2018 21:59:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 21:59:30 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 52
+[06-Feb-2018 21:59:30 UTC] PHP Stack trace:
+[06-Feb-2018 21:59:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 22:01:18 UTC] PHP Fatal error:  Class 'mysqli_connect' not found in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 50
+[06-Feb-2018 22:01:18 UTC] PHP Stack trace:
+[06-Feb-2018 22:01:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 22:02:48 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 52
+[06-Feb-2018 22:02:48 UTC] PHP Stack trace:
+[06-Feb-2018 22:02:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 22:05:08 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 53
+[06-Feb-2018 22:05:08 UTC] PHP Stack trace:
+[06-Feb-2018 22:05:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 22:06:58 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 53
+[06-Feb-2018 22:06:58 UTC] PHP Stack trace:
+[06-Feb-2018 22:06:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 22:07:03 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 53
+[06-Feb-2018 22:07:03 UTC] PHP Stack trace:
+[06-Feb-2018 22:07:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 22:07:09 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 53
+[06-Feb-2018 22:07:09 UTC] PHP Stack trace:
+[06-Feb-2018 22:07:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[06-Feb-2018 22:07:12 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 53
+[06-Feb-2018 22:07:12 UTC] PHP Stack trace:
+[06-Feb-2018 22:07:12 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[07-Feb-2018 18:39:04 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 53
+[07-Feb-2018 18:39:04 UTC] PHP Stack trace:
+[07-Feb-2018 18:39:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[07-Feb-2018 19:04:21 UTC] PHP Warning:  mysqli_result::fetch_assoc(): Couldn't fetch mysqli_result in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php on line 39
+[07-Feb-2018 19:04:21 UTC] PHP Stack trace:
+[07-Feb-2018 19:04:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:0
+[07-Feb-2018 19:04:21 UTC] PHP   2. mysqli_result->fetch_assoc() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/animated-skills-bar-jquery-css3/index.php:39
+[08-Feb-2018 22:38:56 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 59
+[08-Feb-2018 22:38:56 UTC] PHP Stack trace:
+[08-Feb-2018 22:38:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0
+[08-Feb-2018 22:42:59 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php on line 59
+[08-Feb-2018 22:42:59 UTC] PHP Stack trace:
+[08-Feb-2018 22:42:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/Admin Portal/paper-dashboard-free-v1.1.2/paper-dashboard-free-v1.1.2/documentation/css/skills.php:0

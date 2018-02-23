@@ -1,10 +1,9 @@
-<!-- Source: http://www.webslesson.info/2016/09/php-ajax-display-dynamic-mysql-data-in-bootstrap-modal.html --> 
 <?php  
  if(isset($_POST["employee_id"]))  
  {  
       $output = '';  
-      $connect = mysqli_connect("localhost", "conorhorgan95", "","intern_portal"); 
-      $query = "SELECT * FROM `project-registration` WHERE id = '".$_POST["employee_id"]."'";  
+      $connect = mysqli_connect("localhost", "conorhorgan95","","intern_portal"); 
+      $query = "SELECT * FROM project-registration WHERE id = '".$_POST["employee_id"]."'";  
       $result = mysqli_query($connect, $query);  
       $output .= '  
       <div class="table-responsive">  
@@ -13,50 +12,44 @@
       {  
            $output .= '  
                 <tr>  
-                     <td width="30%"><label>Project Name</label></td>  
+                     <td width="30%"><label>Name</label></td>  
                      <td width="70%">'.$row["projname"].'</td>  
                 </tr>  
                 <tr>  
-                     <td width="30%"><label>Subject Matter Expert Name</label></td>  
+                     <td width="30%"><label>Address</label></td>  
                      <td width="70%">'.$row["smename"].'</td>  
                 </tr>  
                 <tr>  
-                     <td width="30%"><label>Subject Matter Expert Email</label></td>  
-                     <td width="70%">'.$row["smeemail"].'</td>  
+                     <td width="30%"><label>Gender</label></td>  
+                     <td width="70%">'.$row["location"].'</td>  
                 </tr>  
                 <tr>  
-                     <td width="30%"><label>Office Location</label></td>  
-                     <td width="70%">'.$row["location"].'</td>  
-                </tr>
-                <tr>  
-                     <td width="30%"><label>Start Date</label></td>  
+                     <td width="30%"><label>Designation</label></td>  
                      <td width="70%">'.$row["startdate"].'</td>  
                 </tr>  
                 <tr>  
-                     <td width="30%"><label>End Date</label></td>  
-                     <td width="70%">'.$row["enddate"].'</td>  
+                     <td width="30%"><label>Age</label></td>  
+                     <td width="70%">'.$row["enddate"].' Year</td>  
+                </tr>  
+                <tr>  
+                     <td width="30%"><label>Age</label></td>  
+                     <td width="70%">'.$row["internsneeded"].' Year</td>  
+                </tr>
+                <tr>  
+                     <td width="30%"><label>Age</label></td>  
+                     <td width="70%">'.$row["estimatehours"].' Year</td>  
                 </tr> 
                 <tr>  
-                     <td width="30%"><label>Number of Interns Needed</label></td>  
-                     <td width="70%">'.$row["internsneeded"].'</td>  
+                     <td width="30%"><label>Age</label></td>  
+                     <td width="70%">'.$row["skill"].' Year</td>  
                 </tr> 
                 <tr>  
-                     <td width="30%"><label>Estimated Hours Per Intern</label></td>  
-                     <td width="70%">'.$row["estimatehours"].'</td>  
-                </tr> 
-                <tr>  
-                     <td width="30%"><label>Skills Required</label></td>  
-                     <td width="70%">'.$row["skill"].'</td>  
-                </tr> 
-                <tr>  
-                     <td width="30%"><label>Project Description</label></td>  
+                     <td width="30%"><label>Age</label></td>  
                      <td width="70%">'.$row["projdesc"].' Year</td>  
                 </tr>  
-                
                 ';  
       }  
       $output .= "</table></div>";  
       echo $output;  
  }  
- 
  ?>

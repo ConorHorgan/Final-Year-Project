@@ -1,0 +1,6 @@
+[21-Feb-2018 22:46:15 UTC] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/ubuntu/workspace/InternDashboard/Messaging/simple-php-messaging-service-master/tests/SimplePMSTest.php on line 12
+[21-Feb-2018 22:46:15 UTC] PHP Stack trace:
+[21-Feb-2018 22:46:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/Messaging/simple-php-messaging-service-master/tests/SimplePMSTest.php:0
+[21-Feb-2018 22:47:16 UTC] PHP Fatal error:  Class 'PHPUnit_Framework_TestCase' not found in /home/ubuntu/workspace/InternDashboard/Messaging/simple-php-messaging-service-master/tests/MessageTest.php on line 12
+[21-Feb-2018 22:47:16 UTC] PHP Stack trace:
+[21-Feb-2018 22:47:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/Messaging/simple-php-messaging-service-master/tests/MessageTest.php:0
