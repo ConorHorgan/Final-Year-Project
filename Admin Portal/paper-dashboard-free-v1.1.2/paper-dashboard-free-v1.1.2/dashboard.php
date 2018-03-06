@@ -269,7 +269,7 @@ width:110px;
                     </a>
                 </li>
                 <li>
-                    <a href="Intern.html">
+                    <a href="intern.html">
                         <i class="ti-user"></i>
                         <p>Intern Admin</p>
                     </a>

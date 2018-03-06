@@ -3,6 +3,34 @@ session_start();
   $query = "SELECT * FROM `project-registration` where `smename` = 'Greg Norman' and `status` = 'in process' ";
   $search_result = filterTable($query);
   
+   $rquery = "SELECT  `project-registration`.`projname` ,  `project-registration`.`startdate` ,  `project-registration`.`enddate` ,  `project-registration`.`estimatehours` ,  `project-registration`.`skill` ,  `project-registration`.`projdesc` , GROUP_CONCAT(  `AppliedProjects`.InternName
+SEPARATOR  ', ' ) AS InternsSelected
+FROM  `project-registration` 
+JOIN  `AppliedProjects` ON  `project-registration`.`id` =  `AppliedProjects`.`ProjectID` 
+WHERE  `smename` =  'Greg Norman'
+AND  `status` =  'finalized'
+LIMIT 0 , 300
+";
+  $rsearch_result = rfilterTable($rquery);
+  
+  $rrrquery = "SELECT *
+FROM message m
+    JOIN message_user mu
+    ON m.id = mu.message_id
+    JOIN intern i
+    ON mu.user_id = i.id
+WHERE mu.deleted = 'none'
+    AND mu.user_id = '1'";
+  $rrrsearch_result = rrrfilterTable($rrrquery);
+  
+  if (isset($_POST["track"])) {
+   $_SESSION["progressid"] = "green";    
+}else{  
+    echo "N0, mail is not set";
+}
+  
+ 
+  
     // function to connect and execute the query
 function filterTable($query)
 {
@@ -10,6 +38,22 @@ function filterTable($query)
     $filter_Result = mysqli_query($connect, $query);
     return $filter_Result;
 }
+  
+    // function to connect and execute the query
+function rrrfilterTable($rrrquery)
+{
+    $rrrconnect = mysqli_connect("localhost", "conorhorgan95","","intern_portal");
+    $rrrfilter_Result = mysqli_query($rrrconnect, $rrrquery);
+    return $rrrfilter_Result;
+}
+    // function to connect and execute the query
+function rfilterTable($rquery)
+{
+    $rconnect = mysqli_connect("localhost", "conorhorgan95","","intern_portal");
+    $rfilter_Result = mysqli_query($rconnect, $rquery);
+    return $rfilter_Result;
+}
+
 if(isset($_POST['apply']))
 {
     $_SESSION['InternN'] = 0;
@@ -65,13 +109,16 @@ if(isset($_POST['needed1']))
 
     <!-- Bootstrap core CSS     -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    
 
     <!-- Animation library for notifications   -->
     <link href="assets/css/animate.min.css" rel="stylesheet"/>
 
     <!--  Light Bootstrap Table core CSS    -->
     <link href="assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet"/>
-
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="assets/css/demo.css" rel="stylesheet" />
@@ -351,157 +398,139 @@ td.default {
 
 </head>
 <body>
-
 <div class="wrapper">
-    <div class="sidebar" data-color="orange" data-image="assets/img/sidebar-5.jpg">
+        <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
-    <!--
-
-        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
         Tip 2: you can also add an image using data-image tag
-
     -->
-
-    	<div class="sidebar-wrapper">
-            <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
-                    Creative Tim
-                </a>
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="http://www.creative-tim.com" class="simple-text">
+                        Creative Tim
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./user.html">
+                            <i class="nc-icon nc-circle-09"></i>
+                            <p>User Profile</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./table.html">
+                            <i class="nc-icon nc-notes"></i>
+                            <p>Table List</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./typography.html">
+                            <i class="nc-icon nc-paper-2"></i>
+                            <p>Typography</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./icons.html">
+                            <i class="nc-icon nc-atom"></i>
+                            <p>Icons</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./maps.html">
+                            <i class="nc-icon nc-pin-3"></i>
+                            <p>Maps</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="./notifications.html">
+                            <i class="nc-icon nc-bell-55"></i>
+                            <p>Notifications</p>
+                        </a>
+                    </li>
+                    <li class="nav-item active active-pro">
+                        <a class="nav-link active" href="upgrade.html">
+                            <i class="nc-icon nc-alien-33"></i>
+                            <p>Upgrade to PRO</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
-
-            <ul class="nav">
-                <li class="active">
-                    <a href="dashboard.html">
-                        <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="user.html">
-                        <i class="pe-7s-user"></i>
-                        <p>User Profile</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="table.html">
-                        <i class="pe-7s-note2"></i>
-                        <p>Table List</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="typography.html">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="icons.html">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="maps.html">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="notifications.html">
-                        <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-				<li class="active-pro">
-                    <a href="upgrade.html">
-                        <i class="pe-7s-rocket"></i>
-                        <p>Upgrade to PRO</p>
-                    </a>
-                </li>
-            </ul>
-    	</div>
-    </div>
-                                        
-
-    <div class="main-panel">
-        <nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class=" container-fluid  ">
+                    <a class="navbar-brand" href="#pablo"> Dashboard </a>
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="nav navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                    <i class="nc-icon nc-palette"></i>
+                                    <span class="d-lg-none">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="dropdown nav-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <i class="nc-icon nc-planet"></i>
+                                    <span class="notification">5</span>
+                                    <span class="d-lg-none">Notification</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Notification 1</a>
+                                    <a class="dropdown-item" href="#">Notification 2</a>
+                                    <a class="dropdown-item" href="#">Notification 3</a>
+                                    <a class="dropdown-item" href="#">Notification 4</a>
+                                    <a class="dropdown-item" href="#">Another notification</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nc-icon nc-zoom-split"></i>
+                                    <span class="d-lg-block">&nbsp;Search</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pablo">
+                                    <span class="no-icon">Account</span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="no-icon">Dropdown</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <div class="divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pablo">
+                                    <span class="no-icon">Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-								<p class="hidden-lg hidden-md">Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-globe"></i>
-                                    <b class="caret hidden-lg hidden-md"></b>
-									<p class="hidden-lg hidden-md">
-										5 Notifications
-										<b class="caret"></b>
-									</p>
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Notification 1</a></li>
-                                <li><a href="#">Notification 2</a></li>
-                                <li><a href="#">Notification 3</a></li>
-                                <li><a href="#">Notification 4</a></li>
-                                <li><a href="#">Another notification</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-								<p class="hidden-lg hidden-md">Search</p>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                           <a href="">
-                               <p>Account</p>
-                            </a>
-                        </li>
-                        <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <p>
-										Dropdown
-										<b class="caret"></b>
-									</p>
-
-                              </a>
-                              <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
-                              </ul>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>Log out</p>
-                            </a>
-                        </li>
-						<li class="separator hidden-lg"></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </nav>
+            <!-- End Navbar -->
 
 
         <div class="content">
@@ -535,15 +564,15 @@ td.default {
                     <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <input type="submit" class="btn db-button-color-one zzz" value="Select"> 
-                                <h4 class="title">Users Behavior</h4>
-                                <p class="category">24 Hours performance</p>
+                                <h4 class="title">Project Applications Which Need Approval</h4>
+                                <p class="category"></p>
                             </div>
                              <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+                                 <br> 
                                 <?php
                                  if($search_result->num_rows === 0)
                                         {
-                                            echo ('No projects need approval');
+                                            echo ('<p style="text-align: center;">No projects need approval</p>');
                                         }
                                         else
                                         {
@@ -578,14 +607,14 @@ td.default {
                                                                             $_SESSION["internsneeded"] = $row["internsneeded"];?>
                                                                         </tr>
                                                                             
-                                                                        <?php endwhile;}?>>
+                                                                        <?php endwhile;}?>
                                                                     </table>
                                                             </form>         
                                                                 <div class="footer">
                                                                     <div class="legend">
-                                                                        <i class="fa fa-circle text-info"></i> Open
-                                                                        <i class="fa fa-circle text-danger"></i> Click
-                                                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                                                        <i class="fa fa-circle text-info"></i> 
+                                                                        <i class="fa fa-circle text-danger"></i> 
+                                                                        <i class="fa fa-circle text-warning"></i> 
                                                                     </div>
                                                                     <hr>
                                                                     <div class="stats">
@@ -597,14 +626,14 @@ td.default {
                         <div class="col-md-8">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Users Behavior</h4>
-                                <p class="category">24 Hours performance</p>
+                                <h4 class="title">On going projects</h4>
+                                <p class="category"></p></p>
                             </div>
                              <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                                 <?php
-                                 if($search_result->num_rows === 0)
+                                 if($rsearch_result->num_rows === 0)
                                         {
-                                            echo ('No projects need approval');
+                                            echo ('<p style="text-align: center;">No projects in process</p>');
                                         }
                                         else
                                         {
@@ -614,38 +643,37 @@ td.default {
                                                         <th class="tbl">Project Name</th>
                                                         <th class="tbl">Start Date</th>
                                                         <th class="tbl">End Date</th>
-                                                        <th class="tbl">Interns Needed</th>
                                                         <th class="tbl">Estimate Hours</th>
+                                                        <th class="tbl">Interns Selected</th>
                                                         <th class="tbl">Skill</th>
                                                         <th class="tbl">Description</th>
-                                                        <th class="tbl">Further Information</th>
+                                                        <th class="tbl"></th>
                                                     </tr>');?>
                         
                                                               <!-- populate table from mysql database -->
                                                                         <?php 
-                                                                        while($row = mysqli_fetch_array($search_result)):?>
+                                                                        while($row = mysqli_fetch_array($rsearch_result)):?>
                                                                         <tr>
                                                                             
                                                                             <td class="tbl"><?php echo $row['projname'];?></td>
                                                                             <td class="tbl"><?php echo $row['startdate'];?></td>
                                                                             <td class="tbl"><?php echo $row['enddate'];?></td>
-                                                                            <td class="tbl"><?php echo $row['internsneeded'];?></td>
                                                                             <td class="tbl"><?php echo $row['estimatehours'];?></td>
+                                                                            <td class="tbl"><?php echo $row['InternsSelected'];?></td>
                                                                             <td class="tbl"><?php echo $row['skill'];?></td>
                                                                             <td class="tbl" style="overflow: auto"><?php echo $row['projdesc'];?></td>
-                                                                            <td class="tbl"><input type="button" name="view" value="view" id="<?php echo $row["id"]; ?>" class="btn btn-info btn-xs view_data" /></td>
-                                                                            <?php $_SESSION["projID"] = $row["id"];
-                                                                            $_SESSION["internsneeded"] = $row["internsneeded"];?>
+                                                                            <td class="tbl"><input type="button" name="view" value="edit" id="<?php echo $row["id"]; ?>" class="btn btn-info btn-xs view_data" /></td>
+                                                                            <td class="tbl"><input type="submit" name="track" value="track" id="<?php echo $row["id"]; ?>" class="btn btn-info btn-xs track_data" /></td>
                                                                         </tr>
                                                                             
-                                                                        <?php endwhile;}?>>
+                                                                        <?php endwhile;}?>
                                                                     </table>
                                                             </form>         
                                                                 <div class="footer">
                                                                     <div class="legend">
-                                                                        <i class="fa fa-circle text-info"></i> Open
-                                                                        <i class="fa fa-circle text-danger"></i> Click
-                                                                        <i class="fa fa-circle text-warning"></i> Click Second Time
+                                                                        <i class="fa fa-circle text-info"></i> 
+                                                                        <i class="fa fa-circle text-danger"></i> 
+                                                                        <i class="fa fa-circle text-warning"></i> 
                                                                     </div>
                                                                     <hr>
                                                                     <div class="stats">
@@ -656,84 +684,85 @@ td.default {
                         </div>
                     </div>
                 </div>
-<div id="dataModal" class="modal fade">  
-      <div class="modal-dialog">  
-           <div class="modal-content">  
-                <div class="modal-header">  
-                     <button type="button" class="close" data-dismiss="modal">&times;</button>  
-                     <h4 class="modal-title">Employee Details</h4>  
-                </div>  
-                 <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-                <div class="modal-body" id="employee_detail">  
-                </div>  
-                <div class="modal-footer">  
-                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
-                     <!--<input type="button" typename="view" value="Apply"  class="btn btn-info btn-xs apply" />-->
-                     
-                      <input type="submit" name="apply" style="background-color: #269abc; color: #fff;" value="apply" class="rounded apply-data"> <br><br>
-                      </form>
-                </div>  
-           </div>  
-      </div>  
- </div>  
+
 
 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6" style="
+    height: 400px;
+    width: 1030px;
+">
                         <div class="card ">
                             <div class="header">
                                 <h4 class="title">2014 Sales</h4>
                                 <p class="category">All products including Taxes</p>
                             </div>
+                            <!------ Include the above in your HEAD tag ---------->
+
                            <div class="w3-container">
-  <h2>W3.CSS Modal</h2>
-<!--  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
--->
  
-                                <div class="footer">
-                                    <a href="skype:conorhorgan95?call">Link will initiate Skype call to username</a>
-                                    <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Tesla Model S
-                                        <i class="fa fa-circle text-danger"></i> BMW 5 Series
-                                    </div>
-                                    <hr>
-                                    <div class="stats">
-                                        <i class="fa fa-check"></i> Data information certified
-                                    </div>
-                                </div>
+<div class="container">
+   
+       
+    </div>
+    <hr />
+    
+        <button type="button"  class="btn btn-danger" data-toggle="modal" data-target="#add_data_Modal" style="width: 100px; height: 40px;margin-bottom: 5px;">Compose</button>
+            <a style="float: right; margin-right: 3px;" class="btn btn-info btn-xs" href="skype:conorhorgan95?call">call user</a>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="home">
+                    <div class="list-group">
+                                <p class="category"></p>
                             </div>
+                             <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+                                 <br> 
+                                <?php
+                                 if($rrrsearch_result->num_rows === 0)
+                                        {
+                                            echo ('<p style="text-align: center;">No messages</p>');
+                                        }
+                                        else
+                                        {
+                                            echo('
+                                           ');?>
+                        
+                                                              <!-- populate table from mysql database -->
+                                                                        <?php 
+                                                                        while($row = mysqli_fetch_array($rrrsearch_result)):?>
+                                                                        <a href="#" class="list-group-item read">
+                                           <span class="name" style="min-width: 120px;
+                                                display: inline-block;"><?php echo $row['Name'];?> <?php echo $row['LastName'];?></span> <span class=""><?php echo $row['subject'];?></span>
+                                            <span class="text-muted" style="font-size: 11px;"><p style="font-size: 11px; display: inline-block;
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align:top">- <?php echo $row['body'];?></p></span> <span
+                                                class="badge" style="    float: left; margin-right: 7px;"><?php echo $row['date'];?></span> <span><input type="button" name="view" value="view" id="<?php echo $row["id"]; ?>" style="float: right; margin-right: 3px;" class="btn btn-info btn-xs view_data" /></span></span></a>
+                                                                            
+                                                                           
+                                                                            
+                                                                        <?php endwhile;}?>
+                                                                     </div>
+                </div>
+                                                            </form>   
+                    
+                <div class="tab-pane fade in" id="profile">
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <span class="text-center">This tab is empty.</span>
                         </div>
                     </div>
-
-                    <div class="col-md-6">
-                        <div class="card ">
-                            <div class="header">
-                                <h4 class="title">Tasks</h4>
-                                <p class="category">Backend development</p>
-                            </div>
-                            <div class="content">
-                                <div class="table-full-width">
-                                    <table class="table">
-                                        <tbody>
-                                            <tr>
-                                                <td>
-													<div class="checkbox">
-						  							  	<input id="checkbox1" type="checkbox">
-						  							  	<label for="checkbox1"></label>
-					  						  		</div>
-                                                </td>
-                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
-                                                <td class="td-actions text-right">
-                                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-info btn-simple btn-xs">
-                                                        <i class="fa fa-edit"></i>
-                                                    </button>
-                                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
-                                                        <i class="fa fa-times"></i>
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
+                </div>
+                <div class="tab-pane fade in" id="messages">
+                    ...</div>
+                <div class="tab-pane fade in" id="settings">
+                    This tab is empty.</div>
+            </div>
+           
+    </div>
+</div>
 													<div class="checkbox">
 						  							  	<input id="checkbox2" type="checkbox" checked>
 						  							  	<label for="checkbox2"></label>
@@ -985,6 +1014,19 @@ td.default {
                    <h3 class="inset-text">Please Assign an Intern to this Project from the List Below</h3>
                    <h4 align="center";>Interns left to assign: <?php $res = $_SESSION['InternN'] - $_SESSION['internsneeded']; if($res < 0){echo("0");}else{echo($res);} ?></h4>
             <div class=" col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2" style=" margin-left: 0px;">
+                <?php 
+                     $rrquery = "SELECT COUNT(InternID) AS NumberOfInterns FROM AppliedProjects where `ProjectID` = '".$_SESSION['ProjectID']."'";
+                     $rrsearch_result = filterTable($rrquery);
+                     
+                        // function to connect and execute the query
+                        function rrfilterTable($rquery)
+                        {
+                            $rrconnect = mysqli_connect("localhost", "conorhorgan95","","intern_portal");
+                            $rrfilter_Result = mysqli_query($rrconnect, $rrquery);
+                            return $rrfilter_Result;
+                        }
+                        echo('<p>xx'.$rrfilter_Result.'</p>');
+                ?>
                 <div class="db-wrapper" style="width:868px;">
                     <div class="db-pricing-nine">
                         <div class="table-responsive">
@@ -1073,138 +1115,79 @@ td.default {
             </div>
         </div>
         
-    </div>
-                <table>
-                  <thead>
-                    <tr>
-                      <th class="hide"></th>
-                      <th class="bg-purple">Classifications</th>
-                       <th class="bg-purple" style="height:80px; bgcolor=#0e83cd"><?php echo($variable1. " " .$lastName1);?></th>
-                      <th class="bg-blue"><?php echo($variable2. " " .$lastName2);?></th>
-                      <th class="bg-blue default"><?php echo($variable3. " " .$lastName3);?></th>
-                      <th class="bg-blue"><?php echo($variable4. " " .$lastName4);?></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td colspan="5" class="sep">Get started easily</td>
-                    </tr>
-                    <tr>
-                      <td bgcolor="#0e83cd">Office Location</td>
-                      <td><?php echo($location1);?></td>
-                      <td><span ><?php echo($location2);?></span></td>
-                      <td class="default"><span><?php echo($location3);?></span></td>
-                      <td><span class="tick">&#10004;</span></td>
-                    </tr>
-                    <tr>
-                      <td>College Major</td>
-                      <td><span><?php echo($collegemajor1);?></span></td>
-                      <td><span><?php echo($collegemajor2);?></span></td>
-                      <td><span><?php echo($collegemajor3);?></span></td>
-                      <td><span><?php echo($collegemajor4);?></span></td>
-                    </tr>
-                    <tr>
-                      <td>Manager's Email</td>
-                      <td><span><?php echo($ManagerEmail1);?></span></td>
-                      <td><span><?php echo($ManagerEmail2);?></span></td>
-                      <td><span><?php echo($ManagerEmail3);?></span></td>
-                      <td><span><?php echo($ManagerEmail4);?></span></td>
-                    </tr>
-                    <tr>
-                      <td>Skills</td>
-                      <td><span><?php echo($skills1);?></span></td>
-                      <td><span><?php echo($skills2);?></span></td>
-                      <td><span><?php echo($skills3);?></span></td>
-                      <td><span><?php echo($skills4);?></span></td>
-                    </tr>
-                    <tr>
-                      <td colspan="5" class="sep">Stay protected and get support</td>
-                    </tr>
-                    <tr>
-                      <td>Free telephone and online support</td>
-                      <td></td>
-                      <td><span class="tick">&#10004;</span></td>
-                      <td class="default"><span class="tick">&#10004;</span></td>
-                      <td><span class="tick">&#10004;</span></td>
-                    </tr>
-                    <tr>
-                      <td>Strong encryption protects your business data</td>
-                      <td><span class="tick">&#10004;</span></td>
-                      <td><span class="tick">&#10004;</span></td>
-                      <td class="default"><span class="tick">&#10004;</span></td>
-                      <td><span class="tick">&#10004;</span></td>
-                    </tr>
-                    <tr>
-                      <td>Automatic data backups</td>
-                      <td><span class="tick">&#10004;</span></td>
-                      <td><span class="tick">&#10004;</span></td>
-                      <td class="default"><span class="tick">&#10004;</span></td>
-                      <td><span class="tick">&#10004;</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                  
-                </article>
-                	<div id="container">
-                		<div class="pricing-table basic" style="width:200px;">
-                			<span class="table-head">
-                				<?php echo($variable1. " " .$lastName1);?>
-                			</span>
-                			<span class="price">
-                				<?php echo($skills1);?>
-                			</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<div class="purchase">
-                				<a href="#" class="buy">Purchase</a>
-                			</div>
-                		</div>
-                
-                		<div class="pricing-table standard" style="width:200px;">
-                			<span class="table-head">
-                				<?php echo($variable2. " " .$lastName2);?>
-                			</span>
-                			<span class="price">
-                				<?php echo($skills2);?>
-                			</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<div class="purchase">
-                				<a href="#" class="buy">Purchase</a>
-                			</div>
-                		</div>
-                
-                		<div class="pricing-table premium" style="width:200px;">
-                			<span class="table-head">
-                				<?php echo($variable3. " " .$lastName3);?>
-                			</span>
-                			<span class="price">
-                				<?php echo($skills3);?>
-                			</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<span class="table-row">Option</span>
-                			<div class="purchase">
-                				<a href="#" class="buy">Purchase</a>
-                			</div>
-                		</div>
-                	</div>
-                      </div>
-                    </div>
-                </div>
-                     
+   </div>
+   </div>
+   </div>
+   <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+                     
+ <div id="add_data_Modal" class="modal fade">
+ <div class="modal-dialog">
+  <div class="modal-content">
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Send Message</h4>
+   </div>
+   <div class="modal-body">
+    <form method="post" id="insert_form">
+     <label>Reciever</label>
+     <select name="gender" id="gender" class="form-control">
+        <option value="" disabled ></option>
+                          <?php
+                          $host = 'localhost';
+                          $user = 'conorhorgan95';
+                          $pass = '';
+                          mysql_connect($host, $user, $pass);
+                          mysql_select_db('intern_portal');
+                        $n = 1;
+                          $select=mysql_query("select Name, LastName from intern group by Name");
+                          while($row=mysql_fetch_array($select))
+                          {
+                           echo "<option>".$row['Name'].' '.$row['LastName']."</option>";
+                            ${"id$n"} = $row['id'];
+                            $n = $n + 1;
+                          }
+                          ?>
+                          
+                        
+     </select>
+     <br />  
+     <label>Subject</label>
+     <textarea name="address" id="address" class="form-control"></textarea>
+     <br />
+     <label>Body</label>
+     <input type="textarea" name="name" id="name" class="form-control" />
+     <br />
+     <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
+
+    </form>
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   </div>
+  </div>
+ </div>
+</div>
 
 </body>
 
@@ -1245,6 +1228,40 @@ td.default {
 
     	};
 	</script>
+	<script>  
+	/* global $ */
+ $('#insert_form').on("submit", function(event){  
+  event.preventDefault();  
+  if($('#name').val() == "")  
+  {  
+   alert("Name is required");  
+  }  
+  else if($('#address').val() == '')  
+  {  
+   alert("Address is required");  
+  }  
+  else if($('#designation').val() == '')
+  {  
+   alert("Designation is required");  
+  }
+   
+  else  
+  {  
+   $.ajax({  
+    url:"message.php",  
+    method:"POST",  
+    data:$('#insert_form').serialize(),  
+    beforeSend:function(){  
+     $('#insert').val("Sending");  
+    },  
+    success:function(data){  
+     $('#insert_form')[0].reset();  
+     $('#add_data_Modal').modal('hide');  
+     $('#employee_table').html(data);  
+    }  
+   });  
+  }  
+ });</script>
 	<script>
 /* global $ */
        $(document).on('click', '.needed', function(){  
@@ -1261,6 +1278,24 @@ td.default {
                      }  
                 });  
            //}            
+      }); 
+</script>
+<script>
+/* global $ */
+       $(document).on('click', '.track_data', function(){  
+          var track_id = $(this).attr("id");    
+         if(track_id != '')  
+         {
+                $.ajax({  
+                    url:"/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php",  
+                     method:"POST",  
+                     data:{track_id:track_id},  
+                     success:function(data){  
+                          $('#employee_detail').html(data);  
+                         
+                     }  
+                });  
+           }            
       }); 
 </script>
 	<script>
@@ -1282,6 +1317,18 @@ td.default {
            } */           
       }); 
 </script>
+ <script>
+/* global $ */
+       $(document).on('click', '.message_data', function(){  
+           var Intern_id = $(this).attr("name");
+          alert('nice')
+                          $('#employee_detail').html(data);  
+                          $('#messageModal').modal('show');  
+                     
+                  
+                       
+      }); 
+</script>
 	<script>
 /* global $ */
        $(document).on('click', '.view_data', function(){  
@@ -1301,17 +1348,7 @@ td.default {
            } */           
       }); 
 </script>
-</<script type="text/javascript" src="">
-    // DIRTY Responsive pricing table JS
-/* global $ */
-$( "ul" ).on( "click", "li", function() {
-  var pos = $(this).index()+2;
-  $("tr").find('td:not(:eq(0))').hide();
-  $('td:nth-child('+pos+')').css('display','table-cell');
-  $("tr").find('th:not(:eq(0))').hide();
-  $('li').removeClass('active');
-  $(this).addClass('active');
-});
+<style>
 
 // Initialize the media query
   var mediaQuery = window.matchMedia('(min-width: 640px)');

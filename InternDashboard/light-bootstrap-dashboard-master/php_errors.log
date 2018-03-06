@@ -1,0 +1,178 @@
+[27-Feb-2018 00:57:11 UTC] PHP Fatal error:  Call to undefined function filterTable() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 7
+[27-Feb-2018 00:57:11 UTC] PHP Stack trace:
+[27-Feb-2018 00:57:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php:0
+[27-Feb-2018 00:57:50 UTC] PHP Fatal error:  Call to undefined function filterTable() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 8
+[27-Feb-2018 00:57:50 UTC] PHP Stack trace:
+[27-Feb-2018 00:57:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php:0
+[27-Feb-2018 01:00:44 UTC] PHP Fatal error:  Call to undefined function filterTable() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 8
+[27-Feb-2018 01:00:44 UTC] PHP Stack trace:
+[27-Feb-2018 01:00:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php:0
+[27-Feb-2018 01:01:22 UTC] PHP Fatal error:  Call to undefined function filterTable() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 11
+[27-Feb-2018 01:01:22 UTC] PHP Stack trace:
+[27-Feb-2018 01:01:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php:0
+[27-Feb-2018 01:03:09 UTC] PHP Fatal error:  Call to undefined function filterTable() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 8
+[27-Feb-2018 01:03:09 UTC] PHP Stack trace:
+[27-Feb-2018 01:03:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php:0
+[27-Feb-2018 01:03:49 UTC] PHP Fatal error:  Call to undefined function filterTable() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 8
+[27-Feb-2018 01:03:49 UTC] PHP Stack trace:
+[27-Feb-2018 01:03:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php:0
+[27-Feb-2018 01:06:28 UTC] PHP Fatal error:  Call to undefined function filterTable() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 8
+[27-Feb-2018 01:06:28 UTC] PHP Stack trace:
+[27-Feb-2018 01:06:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php:0
+[27-Feb-2018 01:07:22 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 98
+[27-Feb-2018 01:08:07 UTC] PHP Fatal error:  Call to undefined function rfilterTable() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 25
+[27-Feb-2018 01:08:07 UTC] PHP Stack trace:
+[27-Feb-2018 01:08:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php:0
+[27-Feb-2018 01:24:18 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 76
+[27-Feb-2018 16:27:36 UTC] PHP Parse error:  syntax error, unexpected '"' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 85
+[27-Feb-2018 16:39:40 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php on line 80
+[27-Feb-2018 17:36:37 UTC] PHP Warning:  move_uploaded_file(uploads/css.txt): failed to open stream: No such file or directory in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:36:37 UTC] PHP Stack trace:
+[27-Feb-2018 17:36:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:36:37 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:36:37 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpLFD3rB' to 'uploads/css.txt' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:36:37 UTC] PHP Stack trace:
+[27-Feb-2018 17:36:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:36:37 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:36:59 UTC] PHP Warning:  move_uploaded_file(uploads/css.txt): failed to open stream: No such file or directory in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:36:59 UTC] PHP Stack trace:
+[27-Feb-2018 17:36:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:36:59 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:36:59 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpHp7pIz' to 'uploads/css.txt' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:36:59 UTC] PHP Stack trace:
+[27-Feb-2018 17:36:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:36:59 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:37:03 UTC] PHP Warning:  move_uploaded_file(uploads/css.txt): failed to open stream: No such file or directory in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:37:03 UTC] PHP Stack trace:
+[27-Feb-2018 17:37:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:37:03 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:37:03 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpoxpscK' to 'uploads/css.txt' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:37:03 UTC] PHP Stack trace:
+[27-Feb-2018 17:37:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:37:03 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:37:07 UTC] PHP Warning:  move_uploaded_file(uploads/css.txt): failed to open stream: No such file or directory in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:37:07 UTC] PHP Stack trace:
+[27-Feb-2018 17:37:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:37:07 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:37:07 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php3Gal37' to 'uploads/css.txt' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:37:07 UTC] PHP Stack trace:
+[27-Feb-2018 17:37:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:37:07 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:38:36 UTC] PHP Warning:  move_uploaded_file(https://fyp-internportal-conorhorgan95.c9users.io/InternDashboard/uploadscss.txt): failed to open stream: HTTP wrapper does not support writeable connections in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:38:36 UTC] PHP Stack trace:
+[27-Feb-2018 17:38:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:38:36 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:38:36 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php8ZmIRP' to 'https://fyp-internportal-conorhorgan95.c9users.io/InternDashboard/uploadscss.txt' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:38:36 UTC] PHP Stack trace:
+[27-Feb-2018 17:38:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:38:36 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:38:43 UTC] PHP Warning:  move_uploaded_file(https://fyp-internportal-conorhorgan95.c9users.io/InternDashboard/uploadscss.txt): failed to open stream: HTTP wrapper does not support writeable connections in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:38:43 UTC] PHP Stack trace:
+[27-Feb-2018 17:38:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:38:43 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:38:43 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpkWnHKE' to 'https://fyp-internportal-conorhorgan95.c9users.io/InternDashboard/uploadscss.txt' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:38:43 UTC] PHP Stack trace:
+[27-Feb-2018 17:38:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:38:43 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:40:00 UTC] PHP Warning:  move_uploaded_file(https://fyp-internportal-conorhorgan95.c9users.io/InternDashboard/uploads/css.txt): failed to open stream: HTTP wrapper does not support writeable connections in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:40:00 UTC] PHP Stack trace:
+[27-Feb-2018 17:40:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:40:00 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:40:00 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php1S8JAg' to 'https://fyp-internportal-conorhorgan95.c9users.io/InternDashboard/uploads/css.txt' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:40:00 UTC] PHP Stack trace:
+[27-Feb-2018 17:40:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:40:00 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:40:04 UTC] PHP Warning:  move_uploaded_file(https://fyp-internportal-conorhorgan95.c9users.io/InternDashboard/uploads/css.txt): failed to open stream: HTTP wrapper does not support writeable connections in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:40:04 UTC] PHP Stack trace:
+[27-Feb-2018 17:40:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:40:04 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[27-Feb-2018 17:40:04 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpN7ckGp' to 'https://fyp-internportal-conorhorgan95.c9users.io/InternDashboard/uploads/css.txt' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php on line 19
+[27-Feb-2018 17:40:04 UTC] PHP Stack trace:
+[27-Feb-2018 17:40:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:0
+[27-Feb-2018 17:40:04 UTC] PHP   2. move_uploaded_file() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/upload.php:19
+[01-Mar-2018 02:52:10 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.php on line 70
+[01-Mar-2018 19:22:24 UTC] PHP Warning:  copy(): Filename cannot be empty in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/up.php on line 9
+[01-Mar-2018 19:22:24 UTC] PHP Stack trace:
+[01-Mar-2018 19:22:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/up.php:0
+[01-Mar-2018 19:22:24 UTC] PHP   2. copy() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/up.php:9
+[02-Mar-2018 01:46:00 UTC] PHP Warning:  copy(): Filename cannot be empty in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/up.php on line 9
+[02-Mar-2018 01:46:00 UTC] PHP Stack trace:
+[02-Mar-2018 01:46:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/up.php:0
+[02-Mar-2018 01:46:00 UTC] PHP   2. copy() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/up.php:9
+[05-Mar-2018 14:50:18 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 377
+[05-Mar-2018 14:51:46 UTC] PHP Fatal error:  Call to a member function fetch_array() on a non-object in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 111
+[05-Mar-2018 14:51:46 UTC] PHP Stack trace:
+[05-Mar-2018 14:51:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 14:56:31 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 110
+[05-Mar-2018 14:56:31 UTC] PHP Stack trace:
+[05-Mar-2018 14:56:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 14:57:29 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 111
+[05-Mar-2018 14:57:29 UTC] PHP Stack trace:
+[05-Mar-2018 14:57:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 14:59:43 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 125
+[05-Mar-2018 14:59:43 UTC] PHP Stack trace:
+[05-Mar-2018 14:59:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 15:31:07 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 84
+[05-Mar-2018 15:31:07 UTC] PHP Stack trace:
+[05-Mar-2018 15:31:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 15:31:07 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:84
+[05-Mar-2018 21:41:40 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php on line 24
+[05-Mar-2018 21:41:40 UTC] PHP Stack trace:
+[05-Mar-2018 21:41:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:0
+[05-Mar-2018 21:41:40 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:24
+[05-Mar-2018 21:41:47 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 464
+[05-Mar-2018 21:42:22 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 468
+[05-Mar-2018 21:44:07 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 26
+[05-Mar-2018 21:44:07 UTC] PHP Stack trace:
+[05-Mar-2018 21:44:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 21:44:07 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:26
+[05-Mar-2018 21:44:07 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 28
+[05-Mar-2018 21:44:07 UTC] PHP Stack trace:
+[05-Mar-2018 21:44:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 21:44:07 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:28
+[05-Mar-2018 21:44:18 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php on line 24
+[05-Mar-2018 21:44:18 UTC] PHP Stack trace:
+[05-Mar-2018 21:44:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:0
+[05-Mar-2018 21:44:18 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:24
+[05-Mar-2018 21:46:30 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 30
+[05-Mar-2018 21:46:30 UTC] PHP Stack trace:
+[05-Mar-2018 21:46:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 21:46:30 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:30
+[05-Mar-2018 21:50:24 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 30
+[05-Mar-2018 21:50:24 UTC] PHP Stack trace:
+[05-Mar-2018 21:50:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 21:50:24 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:30
+[05-Mar-2018 21:50:43 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 30
+[05-Mar-2018 21:50:43 UTC] PHP Stack trace:
+[05-Mar-2018 21:50:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 21:50:43 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:30
+[05-Mar-2018 21:52:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 47
+[05-Mar-2018 21:52:53 UTC] PHP Stack trace:
+[05-Mar-2018 21:52:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 21:52:53 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:47
+[05-Mar-2018 21:57:42 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 47
+[05-Mar-2018 21:57:42 UTC] PHP Stack trace:
+[05-Mar-2018 21:57:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 21:57:42 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:47
+[05-Mar-2018 21:58:41 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 47
+[05-Mar-2018 21:58:41 UTC] PHP Stack trace:
+[05-Mar-2018 21:58:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 21:58:41 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:47
+[05-Mar-2018 22:00:17 UTC] PHP Parse error:  syntax error, unexpected ''";' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 54
+[05-Mar-2018 22:00:54 UTC] PHP Parse error:  syntax error, unexpected ''";' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 56
+[05-Mar-2018 22:02:08 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php on line 24
+[05-Mar-2018 22:02:08 UTC] PHP Stack trace:
+[05-Mar-2018 22:02:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:0
+[05-Mar-2018 22:02:08 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:24
+[05-Mar-2018 22:02:56 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php on line 24
+[05-Mar-2018 22:02:56 UTC] PHP Stack trace:
+[05-Mar-2018 22:02:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:0
+[05-Mar-2018 22:02:56 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:24
+[05-Mar-2018 22:03:02 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php on line 24
+[05-Mar-2018 22:03:02 UTC] PHP Stack trace:
+[05-Mar-2018 22:03:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:0
+[05-Mar-2018 22:03:02 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/track.php:24
+[05-Mar-2018 22:08:19 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php on line 47
+[05-Mar-2018 22:08:19 UTC] PHP Stack trace:
+[05-Mar-2018 22:08:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:0
+[05-Mar-2018 22:08:19 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/progress.1.php:47

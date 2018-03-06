@@ -40,9 +40,7 @@ session_start();
              $sqlr = "UPDATE `project-registration` SET `status`='finalized' where `id` = '$prj' ";
              if (mysqli_query($conn, $sqlr)) {
             echo "Record updated successfully";
-              $query = "SELECT * FROM `project-registration` where `smename` = 'Greg Norman' and `status` = 'in process' ";
-            include "/InternDashboard/light-bootstrap-dashboard-master/dashboard.php";
-            filterTable($query);
+            header("Refresh:0; url=/InternDashboard/light-bootstrap-dashboard-master/dashboard.php");
         } else {
             echo "Error updating record: " . mysqli_error($conn);
         }

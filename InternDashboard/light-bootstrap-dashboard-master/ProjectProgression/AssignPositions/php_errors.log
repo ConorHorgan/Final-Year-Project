@@ -1,0 +1,17 @@
+[02-Mar-2018 17:13:40 UTC] PHP Warning:  Illegal string offset 'gdfdsfdd' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php on line 81
+[02-Mar-2018 17:13:40 UTC] PHP Stack trace:
+[02-Mar-2018 17:13:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php:0
+[02-Mar-2018 17:13:40 UTC] PHP Warning:  Illegal string offset 'uyuyuuy' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php on line 81
+[02-Mar-2018 17:13:40 UTC] PHP Stack trace:
+[02-Mar-2018 17:13:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php:0
+[02-Mar-2018 17:13:40 UTC] PHP Warning:  Illegal string offset 'ghghhg' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php on line 81
+[02-Mar-2018 17:13:40 UTC] PHP Stack trace:
+[02-Mar-2018 17:13:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php:0
+[02-Mar-2018 19:23:29 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php on line 70
+[02-Mar-2018 19:23:29 UTC] PHP Stack trace:
+[02-Mar-2018 19:23:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php:0
+[02-Mar-2018 19:45:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php on line 70
+[02-Mar-2018 19:45:58 UTC] PHP Stack trace:
+[02-Mar-2018 19:45:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php:0
+[02-Mar-2018 19:55:04 UTC] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php on line 86
+[04-Mar-2018 22:21:41 UTC] PHP Parse error:  syntax error, unexpected '' '' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/ubuntu/workspace/InternDashboard/light-bootstrap-dashboard-master/ProjectProgression/AssignPositions/Dynamic-Form-Processing-with-PHP/process.php on line 103

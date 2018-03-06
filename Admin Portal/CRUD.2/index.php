@@ -52,7 +52,7 @@
       {  
            var action = "select";  
            $.ajax({  
-                url : "select.php",  
+                url : "/Admin Portal/CRUD.2/select.php",  
                 method:"POST",  
                 data:{action:action},  
                 success:function(data){  
@@ -71,7 +71,7 @@
            if(firstName != '' && lastName != '')  
            {  
                 $.ajax({  
-                     url : "action.php",  
+                     url : "/Admin Portal/CRUD.2/action.php",  
                      method:"POST",  
                      data:{firstName:firstName, lastName:lastName, id:id, action:action},  
                      success:function(data){  
@@ -88,7 +88,7 @@
       $(document).on('click', '.update', function(){  
            var id = $(this).attr("id");  
            $.ajax({  
-                url:"fetch.php",  
+                url:"/Admin Portal/CRUD.2/fetch.php",  
                 method:"POST",  
                 data:{id:id},  
                 dataType:"json",  
@@ -106,7 +106,7 @@
            {  
                 var action = "Delete";  
                 $.ajax({  
-                     url:"action.php",  
+                     url:"/Admin Portal/CRUD.2/action.php",  
                      method:"POST",  
                      data:{id:id, action:action},  
                      success:function(data)  

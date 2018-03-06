@@ -173,25 +173,23 @@ if (mysqli_query($conn, $sql)) {
                         <option value="India">India</option>
                         <option value="North Quincy">North Quincy</option>
                       </select>
-                     <select name="skill" type="text" id="skill" required="required" class="styled-select blue rounded">
-                        <option value="" disabled selected>Choose your skills</option>
-                        <option value="PHP">PHP</option>
-                        <option value="Codeigniter">Codeigniter</option>
-                        <option value="HTML">HTML</option>
-                        <option value="JQuery">JQuery</option>
-                        <option value="Javascript">Javascript</option>
-                        <option value="CSS">CSS</option>
-                        <option value="Laravel">Laravel</option>
-                        <option value="CakePHP">CakePHP</option>
-                        <option value="Symfony">Symfony</option>
-                        <option value="Codeigniter">Codeigniter</option>
-                        <option value="HTML">HTML</option>
-                        <option value="Yii 2">Yii 2</option>
-                        <option value="Phalcon">Phalcon</option>
-                        <option value="Zend">Zend</option>
-                        <option value="Slim">Slim</option>
-                        <option value="FuelPHP">FuelPHP</option>
-                      </select>
+                       <select name="skill" type="text" id="skill" required="required" class="styled-select blue rounded">
+  <option value="" disabled selected>Choose your skills</option>
+  <?php
+  $host = 'localhost';
+  $user = 'conorhorgan95';
+  $pass = '';
+  mysql_connect($host, $user, $pass);
+  mysql_select_db('intern_portal');
+
+  $select=mysql_query("select skill from ProjectSkills group by skill");
+  while($row=mysql_fetch_array($select))
+  {
+   echo "<option>".$row['skill']."</option>";
+  }
+ ?>
+ </select>
+                 
                         <input type="text" id="startdate" required="required" name="startdate" class="styled-select blue rounded" placeholder="Ideal Project Start Date" />
                         <input type="text" id="enddate" required="required" name="enddate" class="styled-select blue rounded" placeholder="Ideal Project End Date" />
                      
